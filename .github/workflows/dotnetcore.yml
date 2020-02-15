@@ -3,6 +3,8 @@ name: .NET Core
 on:
   push:
     paths:
+      - '**'
+      - '.github/**'
       - '!ClientApp/**'
 
 jobs:

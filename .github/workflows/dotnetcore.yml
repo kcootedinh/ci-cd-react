@@ -3,7 +3,7 @@ name: .NET Core
 on:
   push:
     paths:
-      - '!ClientApp'
+      - '!./ClientApp/**'
 
 jobs:
   build:

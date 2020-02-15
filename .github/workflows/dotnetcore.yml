@@ -1,6 +1,11 @@
 name: .NET Core
 
-on: [push]
+on:
+  push:
+    paths:
+      - '**'
+      - '.github/**'
+      - '!ClientApp/**'
 
 jobs:
   build:

@@ -13,5 +13,5 @@ it('renders without crashing', async () => {
 });
 
 it('always fails', () => {
-    console.assert(false);
+    expect(false).toBe(true);
 });

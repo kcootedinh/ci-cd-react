@@ -1,9 +1,7 @@
 name: .NET Core CI
 
 on:
-  pull_request:
-    branches:
-      - master
+  push:
     paths:
       - '**'
       - '.github/**'

@@ -5,13 +5,13 @@ on:
     branches:
       - master
     paths:
-      - 'ClientApp/**'
+      - 'src/ci-cd-react/ClientApp/**'
 
   pull_request:
     branches:
       - master
     paths:
-      - 'ClientApp/**'
+      - 'src/ci-cd-react/ClientApp/**'
 
 jobs:
   build:

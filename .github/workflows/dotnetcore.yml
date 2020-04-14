@@ -7,7 +7,7 @@ on:
     paths:
       - '**'
       - '.github/**'
-      - '!ClientApp/**'
+      - '!src/ci-cd-react/ClientApp/**'
 
 jobs:
   build:

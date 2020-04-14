@@ -5,13 +5,13 @@ on:
     branches:
       - master
     paths:
-      - 'ClientApp/**'
+      - 'src/ci-cd-react/ClientApp/**'
 
   pull_request:
     branches:
       - master
     paths:
-      - 'ClientApp/**'
+      - 'src/ci-cd-react/ClientApp/**'
 
 jobs:
   build:
@@ -31,13 +31,13 @@ jobs:
           node-version: ${{ matrix.node-version }}
 
       - run: npm install
-        working-directory: ./ClientApp
+        working-directory: ./src/ci-cd-react/ClientApp
 
       - run: npm run build --if-present
-        working-directory: ./ClientApp
+        working-directory: ./src/ci-cd-react/ClientApp
 
 
       - uses: actions/upload-artifact@v1
         with:
           name: client-app-build
-          path: ./ClientApp/build
+          path: ./src/ci-cd-react/ClientApp/build

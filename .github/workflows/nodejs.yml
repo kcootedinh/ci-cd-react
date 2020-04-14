@@ -6,7 +6,7 @@ on:
       - master
     paths:
       - '.github/**'
-      - 'ClientApp/**'
+      - 'src/ci-cd-react/ClientApp/**'
 
 jobs:
   build:
@@ -24,10 +24,10 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - run: npm install
-      working-directory: ./ClientApp
+      working-directory: ./src/ci-cd-react/ClientApp
     - run: npm run build --if-present      
-      working-directory: ./ClientApp
+      working-directory: ./src/ci-cd-react/ClientApp
     - run: npm test
-      working-directory: ./ClientApp
+      working-directory: ./src/ci-cd-react/ClientApp
       env:        
         CI: true

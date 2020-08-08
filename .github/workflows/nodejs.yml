@@ -3,7 +3,7 @@ name: Node.js CI
 on:
   pull_request:
     branches:
-      - master
+      - main
     paths:
       - '.github/**'
       - 'src/ci-cd-react/ClientApp/**'
@@ -25,9 +25,9 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - run: npm install
       working-directory: ./src/ci-cd-react/ClientApp
-    - run: npm run build --if-present      
+    - run: npm run build --if-present
       working-directory: ./src/ci-cd-react/ClientApp
     - run: npm test
       working-directory: ./src/ci-cd-react/ClientApp
-      env:        
+      env:
         CI: true

@@ -3,7 +3,7 @@
 on:
   push:
     branches:
-      - master
+      - main
 
 env:
   AZURE_WEBAPP_NAME: ci-cd-react      # set this to your application's name

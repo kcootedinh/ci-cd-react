@@ -3,7 +3,7 @@
 on:
   push:
     branches:
-      - master
+      - main
     paths:
       - 'src/ci-cd-react/ClientApp/**'
 
